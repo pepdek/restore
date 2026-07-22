@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
+import MapPlaceholder from "@/components/MapPlaceholder";
 import { serviceAreaCities, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -41,9 +42,7 @@ export default function ServiceAreaPage() {
         </div>
 
         {/* ponytail: static embed placeholder, swap for a real Maps embed key once client confirms coverage */}
-        <div className="mt-10 flex h-72 items-center justify-center rounded-lg border border-dashed border-line bg-teal-light text-sm text-teal-dark">
-          Map embed placeholder — South Puget Sound coverage area
-        </div>
+        <MapPlaceholder label="South Puget Sound coverage area" className="mt-10 h-72" />
       </section>
 
       <script

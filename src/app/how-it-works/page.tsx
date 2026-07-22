@@ -35,8 +35,8 @@ export default function HowItWorksPage() {
         <ol className="space-y-10 border-l border-line pl-8">
           {hours.map((h) => (
             <li key={h.title} className="relative">
-              <span className="absolute -left-[calc(2rem+5px)] top-1 h-2.5 w-2.5 rounded-full bg-teal" />
-              <p className="text-sm font-bold uppercase tracking-wide text-teal">{h.time}</p>
+              <span className="absolute -left-[calc(2rem+5px)] top-1 h-2.5 w-2.5 rounded-full bg-midnight" />
+              <p className="text-sm font-bold uppercase tracking-wide text-midnight">{h.time}</p>
               <h2 className="mt-1 text-xl font-bold text-ink">{h.title}</h2>
               <p className="mt-2 text-ink-light">{h.body}</p>
             </li>
@@ -44,7 +44,7 @@ export default function HowItWorksPage() {
         </ol>
       </section>
 
-      <section className="border-t border-line bg-teal-light">
+      <section className="border-t border-line bg-midnight-light">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
           <h2 className="text-2xl font-bold text-ink">See it in action</h2>
           <p className="mt-3 text-ink-light">

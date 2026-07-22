@@ -1,39 +1,63 @@
 @import "tailwindcss";
 
+/*
+  Brand system — 60/30/10:
+  60% cream (backgrounds), 30% jet black + midnight blue (text, dark sections),
+  10% action green reserved for CTAs and small accent marks only.
+*/
 :root {
-  --background: #f7f5f1;
-  --foreground: #16211f;
+  --background: #ffffee;
+  --foreground: #0b0b0c;
 
-  --color-ink: #16211f;
-  --color-ink-light: #3a4a47;
-  --color-paper: #f7f5f1;
+  --color-jet: #0b0b0c;
+  --color-ink: #0b0b0c;
+  --color-ink-light: #4a4a4a;
+
+  --color-cream: #ffffee;
+  --color-paper: #ffffee;
   --color-paper-raised: #ffffff;
-  --color-line: #dcd7cc;
+  --color-line: #e3e0c8;
 
-  --color-teal: #0f5c56;
-  --color-teal-dark: #0a3f3b;
-  --color-teal-light: #e4efee;
+  --color-midnight: #0a1f44;
+  --color-midnight-dark: #060f24;
+  --color-midnight-light: #e7eaf1;
 
-  --color-alert: #b3401f;
+  --color-green: #69be28;
+  --color-green-dark: #549a1f;
+
+  --color-error: #b3401f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-jet: var(--color-jet);
   --color-ink: var(--color-ink);
   --color-ink-light: var(--color-ink-light);
+  --color-cream: var(--color-cream);
   --color-paper: var(--color-paper);
   --color-paper-raised: var(--color-paper-raised);
   --color-line: var(--color-line);
-  --color-teal: var(--color-teal);
-  --color-teal-dark: var(--color-teal-dark);
-  --color-teal-light: var(--color-teal-light);
-  --color-alert: var(--color-alert);
+  --color-midnight: var(--color-midnight);
+  --color-midnight-dark: var(--color-midnight-dark);
+  --color-midnight-light: var(--color-midnight-light);
+  --color-green: var(--color-green);
+  --color-green-dark: var(--color-green-dark);
+  --color-error: var(--color-error);
   --font-sans: var(--font-inter);
+  --font-display: var(--font-archivo);
+  --font-logo: var(--font-archivo-black);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), Arial, Helvetica, sans-serif;
+  letter-spacing: -0.01em;
 }

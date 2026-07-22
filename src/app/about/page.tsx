@@ -37,7 +37,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="border-y border-line bg-teal-light">
+      <section className="border-y border-line bg-midnight-light">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Certifications &amp; Licensing</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">

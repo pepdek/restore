@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import LeadForm from "@/components/LeadForm";
+import MapPlaceholder from "@/components/MapPlaceholder";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,9 +12,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="border-b border-line bg-alert text-white">
+      <section className="border-b border-line bg-jet text-cream">
         <div className="mx-auto max-w-4xl px-4 py-6 text-center sm:px-6">
-          <p className="font-bold">In an active emergency? Call now — a technician is available 24/7.</p>
+          <p className="font-bold">
+            In an active emergency? Call now — a technician is available 24/7.
+          </p>
         </div>
       </section>
 
@@ -33,17 +36,15 @@ export default function ContactPage() {
             <div className="rounded-lg border border-line bg-paper-raised p-6">
               <p className="font-semibold text-ink">{site.name}</p>
               <p className="mt-2 text-sm text-ink-light">{site.address}</p>
-              <a href={site.phoneHref} className="mt-2 block text-sm font-semibold text-teal">
+              <a href={site.phoneHref} className="mt-2 block text-sm font-semibold text-midnight">
                 {site.phone}
               </a>
-              <a href={`mailto:${site.email}`} className="mt-1 block text-sm text-teal">
+              <a href={`mailto:${site.email}`} className="mt-1 block text-sm text-midnight">
                 {site.email}
               </a>
             </div>
             {/* ponytail: static map placeholder, swap for an embedded map once the client confirms an address to publish */}
-            <div className="mt-6 flex h-56 items-center justify-center rounded-lg border border-dashed border-line bg-teal-light text-sm text-teal-dark">
-              Map placeholder
-            </div>
+            <MapPlaceholder label={site.address} className="mt-6 h-56" />
           </div>
         </div>
       </section>

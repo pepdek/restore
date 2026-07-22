@@ -2,8 +2,16 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import Faq from "@/components/Faq";
+import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
 import { serviceContent } from "@/lib/serviceContent";
 import { site } from "@/lib/site";
+
+const serviceIcons = {
+  "water-damage": WaterIcon,
+  "fire-damage": FireIcon,
+  "mold-remediation": MoldIcon,
+  reconstruction: ReconstructionIcon,
+} as const;
 
 export function generateStaticParams() {
   return Object.keys(serviceContent).map((slug) => ({ slug }));
@@ -28,6 +36,7 @@ export default async function ServicePage({
   const { slug } = await params;
   const content = serviceContent[slug];
   if (!content) notFound();
+  const Icon = serviceIcons[slug as keyof typeof serviceIcons];
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -42,7 +51,10 @@ export default async function ServicePage({
     <>
       <section className="border-b border-line bg-paper-raised">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">{content.name}</h1>
+          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-midnight-light">
+            <Icon className="h-9 w-9 text-midnight" />
+          </div>
+          <h1 className="mt-5 text-3xl font-extrabold text-ink sm:text-4xl">{content.name}</h1>
           <p className="mt-4 text-lg text-ink-light">{content.whyItMatters}</p>
           <div className="mt-6">
             <CallCta />
@@ -55,7 +67,7 @@ export default async function ServicePage({
         <ol className="mt-6 space-y-4">
           {content.process.map((step, i) => (
             <li key={step} className="flex gap-4">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-light text-sm font-bold text-teal-dark">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-midnight-light text-sm font-bold text-midnight-dark">
                 {i + 1}
               </span>
               <span className="pt-1 text-ink-light">{step}</span>
@@ -64,7 +76,7 @@ export default async function ServicePage({
         </ol>
       </section>
 
-      <section className="border-y border-line bg-teal-light">
+      <section className="border-y border-line bg-midnight-light">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Insurance &amp; Billing</h2>
           <p className="mt-4 text-ink-light">{content.insurance}</p>

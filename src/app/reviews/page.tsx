@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
+import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Reviews",
@@ -43,19 +44,26 @@ export default function ReviewsPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <h2 className="text-xl font-bold text-ink">Before &amp; After</h2>
+        {/* ponytail: icon placeholders standing in for real before/after photography, swap once the client supplies job photos */}
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {["Water — Living Room", "Fire — Kitchen", "Mold — Basement", "Reconstruction — Bathroom"].map((label) => (
+          {[
+            { label: "Water — Living Room", Icon: WaterIcon },
+            { label: "Fire — Kitchen", Icon: FireIcon },
+            { label: "Mold — Basement", Icon: MoldIcon },
+            { label: "Reconstruction — Bathroom", Icon: ReconstructionIcon },
+          ].map(({ label, Icon }) => (
             <div
               key={label}
-              className="flex h-40 items-center justify-center rounded-md border border-dashed border-line bg-paper-raised px-2 text-center text-xs text-ink-light"
+              className="flex h-40 flex-col items-center justify-center gap-3 rounded-md bg-midnight-light px-2 text-center text-xs font-semibold text-midnight-dark"
             >
-              {label} photo placeholder
+              <Icon className="h-10 w-10 text-midnight" />
+              {label}
             </div>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-line bg-teal-light">
+      <section className="border-t border-line bg-midnight-light">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Need help now?</h2>
           <div className="mt-6 flex justify-center">

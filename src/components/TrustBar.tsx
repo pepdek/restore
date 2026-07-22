@@ -1,17 +1,20 @@
+import { ClockIcon, DocumentIcon, PhoneIcon, ShieldIcon } from "@/components/icons";
+
 const items = [
-  "IICRC Certified Technicians",
-  "Licensed & Insured in WA",
-  "Locally Owned & Operated",
-  "Direct Insurance Billing",
+  { Icon: ShieldIcon, label: "IICRC Certified Technicians" },
+  { Icon: DocumentIcon, label: "Licensed & Insured in WA" },
+  { Icon: PhoneIcon, label: "Locally Owned & Operated" },
+  { Icon: ClockIcon, label: "Direct Insurance Billing" },
 ];
 
 export default function TrustBar() {
   return (
     <div className="border-y border-line bg-paper-raised">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 py-6 text-center text-sm font-semibold text-ink-light sm:px-6 md:grid-cols-4">
-        {items.map((item) => (
-          <div key={item} className="flex items-center justify-center gap-2">
-            <span className="text-teal">✓</span> {item}
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 text-center text-sm font-semibold text-ink-light sm:px-6 md:grid-cols-4">
+        {items.map(({ Icon, label }) => (
+          <div key={label} className="flex flex-col items-center gap-2">
+            <Icon className="h-8 w-8 text-green-dark" />
+            {label}
           </div>
         ))}
       </div>

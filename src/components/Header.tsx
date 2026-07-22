@@ -1,15 +1,56 @@
+"use client";
+
 import Link from "next/link";
-import { navLinks, site } from "@/lib/site";
+import { useState } from "react";
+import { navLinks, services, site } from "@/lib/site";
 
 export default function Header() {
+  const [servicesOpen, setServicesOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight text-ink">
-          {site.name}
+        <Link href="/" className="font-logo text-xl tracking-tight text-jet">
+          {site.name.toUpperCase()}
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-ink-light lg:flex">
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setServicesOpen(true)}
+              aria-expanded={servicesOpen}
+              className="flex items-center gap-1 hover:text-ink"
+            >
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden>
+                <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+            {servicesOpen && (
+              <div className="absolute left-0 top-full w-64 rounded-lg border border-line bg-paper-raised py-2 shadow-lg">
+                {services.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}`}
+                    className="block px-4 py-2 text-ink hover:bg-midnight-light"
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/services"
+                  className="block border-t border-line px-4 py-2 mt-1 pt-2 font-semibold text-midnight"
+                >
+                  All Services
+                </Link>
+              </div>
+            )}
+          </div>
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-ink">
               {link.label}
@@ -20,7 +61,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={site.phoneHref}
-            className="flex items-center gap-2 rounded-md bg-alert px-3 py-2 text-sm font-bold text-white shadow-sm sm:px-4"
+            className="flex items-center gap-2 rounded-md bg-green px-3 py-2 text-sm font-bold text-jet shadow-sm hover:bg-green-dark sm:px-4"
           >
             <span aria-hidden>☎</span>
             <span className="hidden sm:inline">{site.phone}</span>

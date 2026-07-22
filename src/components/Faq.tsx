@@ -20,7 +20,7 @@ export default function Faq({ items }: { items: FaqItem[] }) {
             <summary className="cursor-pointer list-none font-semibold text-ink marker:content-none">
               <span className="flex items-center justify-between gap-4">
                 {item.q}
-                <span className="text-teal group-open:rotate-45 transition-transform">+</span>
+                <span className="text-midnight group-open:rotate-45 transition-transform">+</span>
               </span>
             </summary>
             <p className="mt-3 text-ink-light">{item.a}</p>

@@ -8,7 +8,7 @@ export default function LeadForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-lg border border-teal bg-teal-light p-6 text-teal-dark">
+      <div className="rounded-lg border border-midnight bg-midnight-light p-6 text-midnight-dark">
         Thanks — we&rsquo;ve received your request and a technician will follow up shortly. For anything urgent,
         please call instead.
       </div>
@@ -49,7 +49,7 @@ export default function LeadForm() {
             name="name"
             type="text"
             required
-            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-teal"
+            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function LeadForm() {
             name="phone"
             type="tel"
             required
-            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-teal"
+            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function LeadForm() {
           name="address"
           type="text"
           required
-          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-teal"
+          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
         />
       </div>
       <div>
@@ -86,15 +86,15 @@ export default function LeadForm() {
           name="message"
           rows={4}
           required
-          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-teal"
+          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
         />
       </div>
       {error && (
-        <p className="text-sm text-alert">Something went wrong submitting the form — please call instead.</p>
+        <p className="text-sm text-error">Something went wrong submitting the form — please call instead.</p>
       )}
       <button
         type="submit"
-        className="rounded-md bg-teal px-6 py-3 font-semibold text-white hover:bg-teal-dark"
+        className="rounded-md bg-midnight px-6 py-3 font-semibold text-white hover:bg-midnight-dark"
       >
         Request a Callback
       </button>
