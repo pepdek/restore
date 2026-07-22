@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <p>
         We collect the information you submit through our contact form (name, phone, address, and job details) and
         standard analytics data (pages visited, general location, device type) via cookies described in our{" "}
-        <a href="/legal/cookies" className="text-midnight underline">
+        <a href="/legal/cookies" className="text-green underline">
           Cookie Policy
         </a>
         .

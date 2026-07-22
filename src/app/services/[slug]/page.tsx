@@ -51,7 +51,7 @@ export default async function ServicePage({
     <>
       <section className="border-b border-line bg-paper-raised">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-midnight-light">
+          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-cream">
             <Icon className="h-9 w-9 text-midnight" />
           </div>
           <h1 className="mt-5 text-3xl font-extrabold text-ink sm:text-4xl">{content.name}</h1>
@@ -67,7 +67,7 @@ export default async function ServicePage({
         <ol className="mt-6 space-y-4">
           {content.process.map((step, i) => (
             <li key={step} className="flex gap-4">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-midnight-light text-sm font-bold text-midnight-dark">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cream text-sm font-bold text-midnight">
                 {i + 1}
               </span>
               <span className="pt-1 text-ink-light">{step}</span>

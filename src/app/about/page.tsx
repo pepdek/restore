@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
+import PartnerLogos from "@/components/PartnerLogos";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -48,6 +49,11 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          <h3 className="mt-12 text-sm font-semibold uppercase tracking-wide text-ink-light">
+            Regulatory &amp; Industry Affiliations
+          </h3>
+          <PartnerLogos />
         </div>
       </section>
 

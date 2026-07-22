@@ -2,30 +2,32 @@
 
 /*
   Brand system — 60/30/10:
-  60% cream (backgrounds), 30% jet black + midnight blue (text, dark sections),
-  10% action green reserved for CTAs and small accent marks only.
+  60% jet black (dominant background), 30% midnight blue (card surfaces,
+  secondary sections), 10% cream (deliberate highlight blocks only —
+  trust bar, hero callout, certifications strip). Action green is reserved
+  for CTAs and small accent marks, layered on top, not counted in the mix.
 */
 :root {
-  --background: #ffffee;
-  --foreground: #0b0b0c;
+  --background: #252525;
+  --foreground: #eee1c6;
 
-  --color-jet: #0b0b0c;
-  --color-ink: #0b0b0c;
-  --color-ink-light: #4a4a4a;
+  --color-jet: #252525;
+  --color-ink: #eee1c6;
+  --color-ink-light: #b3a98d;
 
-  --color-cream: #ffffee;
-  --color-paper: #ffffee;
-  --color-paper-raised: #ffffff;
-  --color-line: #e3e0c8;
+  --color-cream: #eee1c6;
+  --color-paper: #252525;
+  --color-paper-raised: #272757;
+  --color-line: rgba(238, 225, 198, 0.15);
 
-  --color-midnight: #0a1f44;
-  --color-midnight-dark: #060f24;
-  --color-midnight-light: #e7eaf1;
+  --color-midnight: #272757;
+  --color-midnight-dark: #1a1a3d;
+  --color-midnight-light: #35356e;
 
   --color-green: #69be28;
   --color-green-dark: #549a1f;
 
-  --color-error: #b3401f;
+  --color-error: #d1633c;
 }
 
 @theme inline {
@@ -60,4 +62,8 @@ h2,
 h3 {
   font-family: var(--font-display), Arial, Helvetica, sans-serif;
   letter-spacing: -0.01em;
+}
+
+.cut-a {
+  clip-path: polygon(0 0, 42% 0, 50% 14%, 58% 0, 100% 0, 100% 100%, 0 100%);
 }

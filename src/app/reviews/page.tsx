@@ -54,7 +54,7 @@ export default function ReviewsPage() {
           ].map(({ label, Icon }) => (
             <div
               key={label}
-              className="flex h-40 flex-col items-center justify-center gap-3 rounded-md bg-midnight-light px-2 text-center text-xs font-semibold text-midnight-dark"
+              className="flex h-40 flex-col items-center justify-center gap-3 rounded-md bg-cream px-2 text-center text-xs font-semibold text-jet"
             >
               <Icon className="h-10 w-10 text-midnight" />
               {label}

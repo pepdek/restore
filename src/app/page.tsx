@@ -42,7 +42,7 @@ export default function Home() {
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
               The Right Choice in Cleanup &amp; Restoration
             </h1>
-            <p className="mt-4 text-xl font-semibold text-midnight-dark">
+            <p className="mt-4 text-xl font-semibold text-green">
               The South Sound&rsquo;s fastest restoration team — with the response times and documentation to prove it.
             </p>
             <p className="mt-4 text-ink-light">
@@ -54,9 +54,9 @@ export default function Home() {
               <SecondaryCta href="/how-it-works" label="See How It Works" />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-jet p-8">
-            <ShieldIcon className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 text-white/5" />
-            <p className="text-sm font-semibold uppercase tracking-wide text-green">24/7 Emergency Response</p>
+          <div className="relative overflow-hidden rounded-2xl bg-cream p-8">
+            <ShieldIcon className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 text-jet/5" />
+            <p className="text-sm font-semibold uppercase tracking-wide text-green-dark">24/7 Emergency Response</p>
             <ul className="mt-5 space-y-4">
               {[
                 { Icon: ClockIcon, text: "Response time tracked on every dispatch" },
@@ -64,8 +64,8 @@ export default function Home() {
                 { Icon: ShieldIcon, text: "IICRC certified technicians, not subcontractors" },
                 { Icon: PhoneIcon, text: "Locally owned — a real person answers" },
               ].map(({ Icon, text }) => (
-                <li key={text} className="flex items-center gap-3 text-cream">
-                  <Icon className="h-6 w-6 shrink-0 text-green" />
+                <li key={text} className="flex items-center gap-3 text-jet">
+                  <Icon className="h-6 w-6 shrink-0 text-green-dark" />
                   <span>{text}</span>
                 </li>
               ))}
@@ -85,14 +85,14 @@ export default function Home() {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-midnight"
+                className="group rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-green"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-midnight-light">
+                <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-cream">
                   <Icon className="h-8 w-8 text-midnight" />
                 </div>
                 <h3 className="mt-4 font-bold text-ink">{s.name}</h3>
                 <p className="mt-2 text-sm text-ink-light">{s.blurb}</p>
-                <span className="mt-4 inline-block text-sm font-semibold text-midnight">Learn more →</span>
+                <span className="mt-4 inline-block text-sm font-semibold text-green">Learn more →</span>
               </Link>
             );
           })}
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
               <div key={step.title}>
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-paper-raised">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cream">
                   <step.Icon className="h-6 w-6 text-midnight" />
                 </div>
                 <span className="mt-3 block text-sm font-bold text-green-dark">{String(i + 1).padStart(2, "0")}</span>
@@ -135,10 +135,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-ink">
-        <div className="mx-auto max-w-6xl px-4 py-16 text-paper sm:px-6">
+      <section className="border-t border-line bg-midnight">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Serving the South Puget Sound</h2>
-          <p className="mt-4 max-w-2xl text-paper/80">
+          <p className="mt-4 max-w-2xl text-cream/80">
             {serviceAreaCities.slice(0, 6).join(", ")}, and more — dispatched from a local base, not a
             regional call center.
           </p>

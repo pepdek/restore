@@ -36,10 +36,10 @@ export default function ContactPage() {
             <div className="rounded-lg border border-line bg-paper-raised p-6">
               <p className="font-semibold text-ink">{site.name}</p>
               <p className="mt-2 text-sm text-ink-light">{site.address}</p>
-              <a href={site.phoneHref} className="mt-2 block text-sm font-semibold text-midnight">
+              <a href={site.phoneHref} className="mt-2 block text-sm font-semibold text-green">
                 {site.phone}
               </a>
-              <a href={`mailto:${site.email}`} className="mt-1 block text-sm text-midnight">
+              <a href={`mailto:${site.email}`} className="mt-1 block text-sm text-green">
                 {site.email}
               </a>
             </div>

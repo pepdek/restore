@@ -8,7 +8,7 @@ export default function LeadForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-lg border border-midnight bg-midnight-light p-6 text-midnight-dark">
+      <div className="rounded-lg border border-green bg-cream p-6 text-jet">
         Thanks — we&rsquo;ve received your request and a technician will follow up shortly. For anything urgent,
         please call instead.
       </div>
@@ -49,7 +49,7 @@ export default function LeadForm() {
             name="name"
             type="text"
             required
-            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
+            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function LeadForm() {
             name="phone"
             type="tel"
             required
-            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
+            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function LeadForm() {
           name="address"
           type="text"
           required
-          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
+          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
         />
       </div>
       <div>
@@ -86,7 +86,7 @@ export default function LeadForm() {
           name="message"
           rows={4}
           required
-          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
+          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
         />
       </div>
       {error && (
@@ -94,7 +94,7 @@ export default function LeadForm() {
       )}
       <button
         type="submit"
-        className="rounded-md bg-midnight px-6 py-3 font-semibold text-white hover:bg-midnight-dark"
+        className="rounded-md bg-green px-6 py-3 font-semibold text-jet hover:bg-green-dark"
       >
         Request a Callback
       </button>

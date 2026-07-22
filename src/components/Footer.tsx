@@ -1,12 +1,13 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 import { navLinks, serviceAreaCities, services, site } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-line bg-ink text-paper/80">
+    <footer className="mt-24 border-t border-line bg-jet text-cream/80">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
-          <p className="text-lg font-bold text-white">{site.name}</p>
+          <Logo className="text-xl" />
           <p className="mt-2 text-sm">{site.tagline}</p>
           <a href={site.phoneHref} className="mt-4 block text-lg font-bold text-white">
             {site.phone}

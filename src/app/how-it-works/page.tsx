@@ -36,7 +36,7 @@ export default function HowItWorksPage() {
           {hours.map((h) => (
             <li key={h.title} className="relative">
               <span className="absolute -left-[calc(2rem+5px)] top-1 h-2.5 w-2.5 rounded-full bg-midnight" />
-              <p className="text-sm font-bold uppercase tracking-wide text-midnight">{h.time}</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-green">{h.time}</p>
               <h2 className="mt-1 text-xl font-bold text-ink">{h.title}</h2>
               <p className="mt-2 text-ink-light">{h.body}</p>
             </li>

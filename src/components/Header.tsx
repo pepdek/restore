@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Logo from "@/components/Logo";
 import { navLinks, services, site } from "@/lib/site";
 
 export default function Header() {
@@ -10,8 +11,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="font-logo text-xl tracking-tight text-jet">
-          {site.name.toUpperCase()}
+        <Link href="/">
+          <Logo className="text-2xl" />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-ink-light lg:flex">
@@ -44,7 +45,7 @@ export default function Header() {
                 ))}
                 <Link
                   href="/services"
-                  className="block border-t border-line px-4 py-2 mt-1 pt-2 font-semibold text-midnight"
+                  className="block border-t border-line px-4 py-2 mt-1 pt-2 font-semibold text-green"
                 >
                   All Services
                 </Link>

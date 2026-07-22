@@ -18,7 +18,7 @@ export function SecondaryCta({ href, label, dark = false }: { href: string; labe
       href={href}
       className={
         dark
-          ? "inline-flex items-center justify-center gap-2 rounded-md border border-white px-6 py-3 text-base font-semibold text-white hover:bg-white hover:text-ink"
+          ? "inline-flex items-center justify-center gap-2 rounded-md border border-white px-6 py-3 text-base font-semibold text-white hover:bg-white hover:text-jet"
           : "inline-flex items-center justify-center gap-2 rounded-md border border-ink px-6 py-3 text-base font-semibold text-ink hover:bg-ink hover:text-paper"
       }
     >
