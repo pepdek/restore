@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   if (submitted) {
     return (
@@ -19,9 +20,21 @@ export default function LeadForm() {
       name="contact"
       method="POST"
       data-netlify="true"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setError(false);
+        const form = e.currentTarget;
+        try {
+          const res = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString(),
+          });
+          if (!res.ok) throw new Error("submit failed");
+          setSubmitted(true);
+        } catch {
+          setError(true);
+        }
       }}
       className="space-y-4"
     >
@@ -76,6 +89,9 @@ export default function LeadForm() {
           className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-teal"
         />
       </div>
+      {error && (
+        <p className="text-sm text-alert">Something went wrong submitting the form — please call instead.</p>
+      )}
       <button
         type="submit"
         className="rounded-md bg-teal px-6 py-3 font-semibold text-white hover:bg-teal-dark"
