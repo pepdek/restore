@@ -1,65 +1,118 @@
-import Image from "next/image";
+import Link from "next/link";
+import { CallCta, SecondaryCta } from "@/components/Cta";
+import TrustBar from "@/components/TrustBar";
+import { serviceAreaCities, services } from "@/lib/site";
+
+const steps = [
+  { title: "Call", body: "A local technician answers — day or night. Not a call center." },
+  { title: "Assess & Document", body: "Moisture readings, photos, and a written scope logged from minute one." },
+  { title: "Restore", body: "Extraction, drying, cleanup, or rebuild — tracked against a response-time standard." },
+  { title: "Insurance Handles Payment", body: "We bill your carrier directly using the documentation we collected." },
+];
+
+const reviews = [
+  { quote: "They had a crew at our house within the hour. Everything was documented for our adjuster before we even called the insurance company.", name: "Marci T., Lakewood" },
+  { quote: "No pressure, no upsell — just people who knew exactly what they were doing and showed their work.", name: "Dave R., Puyallup" },
+  { quote: "We looked at a national chain first. Restora called back in ten minutes and actually showed up when they said they would.", name: "Angela P., Tacoma" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <section className="border-b border-line bg-paper-raised">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:py-24">
+          <div>
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+              The Right Choice in Cleanup &amp; Restoration
+            </h1>
+            <p className="mt-4 text-xl font-semibold text-teal-dark">
+              The South Sound&rsquo;s fastest restoration team — with the response times and documentation to prove it.
+            </p>
+            <p className="mt-4 text-ink-light">
+              Locally owned water, fire, and mold restoration. Every job is tracked from first call to
+              final invoice, so you and your adjuster always know exactly where things stand.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <CallCta />
+              <SecondaryCta href="/how-it-works" label="See How It Works" />
+            </div>
+          </div>
+          <div className="rounded-lg border border-line bg-paper p-6">
+            <p className="text-sm font-semibold uppercase tracking-wide text-teal">24/7 Emergency Response</p>
+            <ul className="mt-4 space-y-3 text-ink-light">
+              <li>• Response time tracked on every dispatch</li>
+              <li>• Direct billing to your insurance carrier</li>
+              <li>• IICRC certified technicians, not subcontractors</li>
+              <li>• Locally owned — a real person answers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <TrustBar />
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Restoration Services</h2>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              className="rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-teal"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              <h3 className="font-bold text-ink">{s.name}</h3>
+              <p className="mt-2 text-sm text-ink-light">{s.blurb}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-teal">Learn more →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-line bg-teal-light">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <h2 className="text-2xl font-bold text-ink sm:text-3xl">How It Works</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step, i) => (
+              <div key={step.title}>
+                <span className="text-sm font-bold text-teal">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-1 font-bold text-ink">{step.title}</h3>
+                <p className="mt-2 text-sm text-ink-light">{step.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            <SecondaryCta href="/how-it-works" label="See the Full Process" />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">What Neighbors Are Saying</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {reviews.map((r) => (
+            <blockquote key={r.name} className="rounded-lg border border-line bg-paper-raised p-6">
+              <p className="text-ink-light">&ldquo;{r.quote}&rdquo;</p>
+              <footer className="mt-4 text-sm font-semibold text-ink">{r.name}</footer>
+            </blockquote>
+          ))}
+        </div>
+        <div className="mt-8">
+          <SecondaryCta href="/reviews" label="Read More Reviews" />
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-ink">
+        <div className="mx-auto max-w-6xl px-4 py-16 text-paper sm:px-6">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">Serving the South Puget Sound</h2>
+          <p className="mt-4 max-w-2xl text-paper/80">
+            {serviceAreaCities.slice(0, 6).join(", ")}, and more — dispatched from a local base, not a
+            regional call center.
           </p>
+          <div className="mt-8">
+            <SecondaryCta href="/service-area" label="View Full Coverage Area" dark />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
