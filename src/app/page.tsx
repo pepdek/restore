@@ -53,7 +53,7 @@ export default function Home() {
                 { Icon: ClockIcon, text: "Response time tracked and logged on every dispatch" },
               ].map(({ Icon, text }) => (
                 <li key={text} className="flex items-center gap-3 text-cream">
-                  <Icon className="h-6 w-6 shrink-0 text-green" />
+                  <Icon className="h-6 w-6 shrink-0 text-white" />
                   <span>{text}</span>
                 </li>
               ))}

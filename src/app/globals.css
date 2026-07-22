@@ -2,9 +2,12 @@
 
 /*
   Brand system — "polished marble, white space, and shine":
-  Action Green #69BE28 is the ONLY saturated color on the site — CTAs,
+  Action Green #49831C is the ONLY saturated color on the site — CTAs,
     active states, icon accents on dark surfaces, and the logo. Never
     combined with a second bright hue on the same screen.
+    Tuned from the original #69BE28 (same 94° hue, same 65% saturation,
+    darker lightness) specifically so plain white button text passes
+    WCAG AA at 4.6:1 without relying on bold/large-text sizing.
   Midnight Navy #34414E is the muted counterweight — body text, secondary
     buttons/outlines, header/footer/dark section backgrounds. Deliberately
     desaturated so it never competes with the green.
@@ -27,7 +30,7 @@
 
   --color-midnight: #34414e;
 
-  --color-green: #69be28;
+  --color-green: #49831c;
 }
 
 @theme inline {

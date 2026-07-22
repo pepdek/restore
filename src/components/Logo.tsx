@@ -8,7 +8,7 @@ export default function Logo({
   className?: string;
 }) {
   const letterColor = on === "dark" ? "text-white" : "text-green";
-  const aColor = on === "dark" ? "text-green" : "text-midnight";
+  const aColor = on === "dark" ? "text-white" : "text-midnight";
 
   return (
     <span

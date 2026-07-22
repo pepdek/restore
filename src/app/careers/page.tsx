@@ -51,7 +51,7 @@ export default function CareersPage() {
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
               href={`mailto:${site.email}?subject=Careers%20Inquiry`}
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-green px-6 py-3 text-base font-bold text-jet shadow-sm hover:opacity-90"
+              className="shine inline-flex items-center justify-center gap-2 rounded-md bg-green px-6 py-3 text-lg text-white hover:opacity-90"
             >
               Email Your Resume
             </a>

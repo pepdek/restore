@@ -62,7 +62,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 rounded-md bg-green px-3 py-2 text-xl font-bold text-jet hover:opacity-90 lg:flex"
+            className="hidden items-center gap-2 rounded-md bg-green px-3 py-2 text-lg text-white hover:opacity-90 lg:flex"
           >
             <span aria-hidden>☎</span>
             <span>{site.phone}</span>
