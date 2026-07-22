@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Join the Restora team — a locally owned restoration company in the South Puget Sound.",
+  description: "Join the RESTORA team — a locally owned restoration company in the South Puget Sound.",
 };
 
 const values = [
@@ -18,8 +18,8 @@ export default function CareersPage() {
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Careers at Restora</h1>
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
+          <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Careers at RESTORA</h1>
           <p className="mt-4 text-lg text-ink/70">
             We&rsquo;re a locally owned restoration company in Tacoma, hiring technicians and support staff who want
             real training and steady local work — not a franchise territory.
@@ -27,11 +27,11 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-        <h2 className="text-2xl font-bold text-ink">Why Restora</h2>
+      <section className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
+        <h2 className="text-2xl font-bold text-ink">Why RESTORA</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {values.map((v) => (
-            <div key={v.title} className="rounded-lg border border-line bg-paper-raised p-6">
+            <div key={v.title} className="shine rounded-lg border border-line bg-paper-raised p-6">
               <v.Icon className="h-8 w-8 text-midnight" />
               <h3 className="mt-4 font-bold text-ink">{v.title}</h3>
               <p className="mt-2 text-sm text-ink/70">{v.body}</p>
@@ -41,7 +41,7 @@ export default function CareersPage() {
       </section>
 
       <section className="border-t border-line">
-        <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6">
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 text-center sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Open Positions</h2>
           <p className="mt-3 text-ink/70">
             {/* ponytail: no ATS integration yet — direct applicants to email/phone until a real job board is wired up */}

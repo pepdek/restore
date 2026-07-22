@@ -25,8 +25,8 @@ const archivoBlack = Archivo_Black({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s | ${site.name}`,
+    default: `${site.displayName} — ${site.tagline}`,
+    template: `%s | ${site.displayName}`,
   },
   description:
     "24/7 water, fire, and mold restoration for the South Puget Sound. The same local, IICRC certified team on every job — documented and verifiable, with direct insurance billing.",

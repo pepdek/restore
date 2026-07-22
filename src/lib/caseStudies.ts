@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
     scope:
       "Emergency board-up and power shutoff, HVAC and duct soot removal, thermal fogging for smoke odor throughout the dining area, and reconstruction of the damaged kitchen ceiling and exhaust enclosure.",
     outcome:
-      "Restaurant reopened five weeks ahead of the contractor's original rebuild estimate for a comparable job, because the same Restora crew ran mitigation and reconstruction back to back with no re-scoping between phases.",
+      "Restaurant reopened five weeks ahead of the contractor's original rebuild estimate for a comparable job, because the same RESTORA crew ran mitigation and reconstruction back to back with no re-scoping between phases.",
   },
   {
     slug: "puyallup-attic-mold",
@@ -56,6 +56,6 @@ export const caseStudies: CaseStudy[] = [
     scope:
       "After-hours emergency dispatch, extraction and containment around active IT equipment, structural drying with twice-daily moisture readings during business hours, and direct coordination with the building's property manager and insurer.",
     outcome:
-      "Offices reopened for business the next morning with drying equipment staged to avoid disrupting staff, and the property manager received the same documentation packet used on every Restora commercial job.",
+      "Offices reopened for business the next morning with drying equipment staged to avoid disrupting staff, and the property manager received the same documentation packet used on every RESTORA commercial job.",
   },
 ];

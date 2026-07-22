@@ -1,5 +1,6 @@
 export const site = {
   name: "Restora",
+  displayName: "RESTORA",
   tagline: "One team. One standard. Every time.",
   phone: "(253) 555-0142",
   phoneHref: "tel:+12535550142",

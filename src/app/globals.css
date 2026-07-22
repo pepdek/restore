@@ -1,32 +1,33 @@
 @import "tailwindcss";
 
 /*
-  Brand system — SERVPRO-style tonal mapping onto our four colors:
-  White/Cream = clean dominant backgrounds (their white)
-  Midnight Blue #272757 = structural brand color: header, footer, feature
-    bands, text links on light surfaces (their green)
-  Action Green #69BE28 = CTA buttons and highlights only (their orange) —
-  fails contrast as text on light backgrounds, so never used as bare text
-  outside buttons or dark surfaces.
-  Jet Black #252525 = body text on light surfaces.
+  Brand system — "polished marble, white space, and shine":
+  Action Green #69BE28 is the ONLY saturated color on the site — CTAs,
+    active states, icon accents on dark surfaces, and the logo. Never
+    combined with a second bright hue on the same screen.
+  Midnight Navy #34414E is the muted counterweight — body text, secondary
+    buttons/outlines, header/footer/dark section backgrounds. Deliberately
+    desaturated so it never competes with the green.
+  Pure white is the dominant background everywhere. A cool light gray
+    (#F5F6F7) is used sparingly for card surfaces where white-on-white
+    would lose definition — never warm/cream.
+  No black, no cream, no second saturated hue anywhere in the system.
 */
 :root {
-  --background: #eee1c6;
-  --foreground: #252525;
+  --background: #ffffff;
+  --foreground: #34414e;
 
-  --color-jet: #252525;
-  --color-ink: #252525;
+  --color-jet: #34414e;
+  --color-ink: #34414e;
 
-  --color-cream: #eee1c6;
-  --color-paper: #eee1c6;
-  --color-paper-raised: #ffffff;
-  --color-line: rgba(37, 37, 37, 0.12);
+  --color-cream: #ffffff;
+  --color-paper: #ffffff;
+  --color-paper-raised: #f5f6f7;
+  --color-line: rgba(52, 65, 78, 0.12);
 
-  --color-midnight: #272757;
+  --color-midnight: #34414e;
 
   --color-green: #69be28;
-
-  --color-error: #d1633c;
 }
 
 @theme inline {
@@ -40,7 +41,6 @@
   --color-line: var(--color-line);
   --color-midnight: var(--color-midnight);
   --color-green: var(--color-green);
-  --color-error: var(--color-error);
   --font-sans: var(--font-inter);
   --font-display: var(--font-archivo);
   --font-logo: var(--font-archivo-black);
@@ -50,6 +50,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
 
 h1,
@@ -57,8 +58,15 @@ h2,
 h3 {
   font-family: var(--font-display), Arial, Helvetica, sans-serif;
   letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
 .cut-a {
   clip-path: polygon(0 0, 42% 0, 50% 14%, 58% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.shine {
+  box-shadow:
+    0 1px 2px rgba(52, 65, 78, 0.04),
+    0 8px 24px -8px rgba(52, 65, 78, 0.12);
 }

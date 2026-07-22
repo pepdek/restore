@@ -90,11 +90,13 @@ export default function LeadForm() {
         />
       </div>
       {error && (
-        <p className="text-sm text-error">Something went wrong submitting the form — please call instead.</p>
+        <p className="text-sm text-ink">
+          <strong>Error:</strong> Something went wrong submitting the form — please call instead.
+        </p>
       )}
       <button
         type="submit"
-        className="rounded-md bg-green px-6 py-3 font-semibold text-jet hover:opacity-90"
+        className="rounded-md bg-green px-6 py-3 text-xl font-bold text-jet shine hover:opacity-90"
       >
         Request a Callback
       </button>

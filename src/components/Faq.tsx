@@ -12,7 +12,7 @@ export default function Faq({ items }: { items: FaqItem[] }) {
   };
 
   return (
-    <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <section className="mx-auto max-w-3xl px-4 py-20 sm:py-28 sm:px-6">
       <h2 className="text-2xl font-bold text-ink sm:text-3xl">Frequently Asked Questions</h2>
       <div className="mt-8 divide-y divide-line border-t border-line">
         {items.map((item) => (

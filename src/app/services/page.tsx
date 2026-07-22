@@ -17,7 +17,7 @@ const serviceIcons = {
 
 export default function ServicesHub() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <section className="mx-auto max-w-6xl px-4 py-20 sm:py-28 sm:px-6">
       <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Restoration Services</h1>
       <p className="mt-4 max-w-2xl text-ink/70">
         Every service below follows the same documented process — response tracked, damage logged, insurer billed
@@ -30,7 +30,7 @@ export default function ServicesHub() {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              className="rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-midnight"
+              className="shine rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-midnight"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-cream">
                 <Icon className="h-8 w-8 text-midnight" />

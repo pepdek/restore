@@ -50,8 +50,8 @@ export default async function ServicePage({
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-cream">
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
+          <div className="shine flex h-16 w-16 items-center justify-center rounded-xl bg-paper-raised">
             <Icon className="h-9 w-9 text-midnight" />
           </div>
           <h1 className="mt-5 text-3xl font-extrabold text-ink sm:text-4xl">{content.name}</h1>
@@ -62,12 +62,12 @@ export default async function ServicePage({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-        <h2 className="text-2xl font-bold text-ink">The Restora Process</h2>
+      <section className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
+        <h2 className="text-2xl font-bold text-ink">The RESTORA Process</h2>
         <ol className="mt-6 space-y-4">
           {content.process.map((step, i) => (
             <li key={step} className="flex gap-4">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cream text-sm font-bold text-midnight">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-paper-raised text-sm font-bold text-midnight">
                 {i + 1}
               </span>
               <span className="pt-1 text-ink/70">{step}</span>
@@ -77,8 +77,8 @@ export default async function ServicePage({
       </section>
 
       <section className="border-y border-line">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <div className="rounded-2xl bg-paper-raised p-8 sm:p-12">
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
+          <div className="shine rounded-2xl bg-paper-raised p-8 sm:p-12">
             <h2 className="text-2xl font-bold text-ink">Insurance &amp; Billing</h2>
             <p className="mt-4 text-ink/70">{content.insurance}</p>
           </div>
@@ -88,7 +88,7 @@ export default async function ServicePage({
       <Faq items={content.faqs} />
 
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
-        <div className="rounded-lg border border-line bg-paper-raised p-8 text-center">
+        <div className="shine rounded-lg border border-line bg-paper-raised p-8 text-center">
           <h2 className="text-xl font-bold text-ink">Need help right now?</h2>
           <p className="mt-2 text-ink/70">A local technician is available 24/7.</p>
           <div className="mt-6">

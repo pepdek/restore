@@ -7,7 +7,8 @@ export default function Logo({
   on?: "dark" | "light";
   className?: string;
 }) {
-  const letterColor = on === "dark" ? "text-cream" : "text-midnight";
+  const letterColor = on === "dark" ? "text-white" : "text-green";
+  const aColor = on === "dark" ? "text-green" : "text-midnight";
 
   return (
     <span
@@ -16,7 +17,7 @@ export default function Logo({
       {LETTERS.map((letter, i) => (
         <span key={i}>{letter}</span>
       ))}
-      <span className="cut-a text-green">A</span>
+      <span className={`cut-a ${aColor}`}>A</span>
     </span>
   );
 }

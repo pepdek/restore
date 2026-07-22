@@ -13,7 +13,7 @@ export default function SafetyDataSheetsPage() {
   return (
     <LegalPage title="Safety Data Sheets">
       <p>
-        Safety Data Sheets (SDS) for chemicals and products used on Restora job sites are listed below. Sheets are
+        Safety Data Sheets (SDS) for chemicals and products used on RESTORA job sites are listed below. Sheets are
         added as products are added to our approved product list.
       </p>
       <div className="mt-6 overflow-x-auto rounded-lg border border-line">
