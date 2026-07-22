@@ -1,6 +1,6 @@
 export const site = {
   name: "Restora",
-  tagline: "The South Sound's fastest restoration team",
+  tagline: "One team. One standard. Every time.",
   phone: "(253) 555-0142",
   phoneHref: "tel:+12535550142",
   email: "help@restorasouthsound.com",
@@ -60,5 +60,6 @@ export const serviceAreaCities = [
 export const navLinks = [
   { href: "/service-area", label: "Service Area" },
   { href: "/insurance-claims", label: "Insurance" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/about", label: "About" },
 ];

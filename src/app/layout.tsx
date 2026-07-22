@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "24/7 water, fire, and mold restoration for the South Puget Sound. Local, IICRC certified, direct insurance billing, and documented response times.",
+    "24/7 water, fire, and mold restoration for the South Puget Sound. The same local, IICRC certified team on every job — documented and verifiable, with direct insurance billing.",
 };
 
 const localBusinessJsonLd = {
