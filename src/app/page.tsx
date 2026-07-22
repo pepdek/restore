@@ -23,7 +23,7 @@ const serviceIcons = {
 export default function Home() {
   return (
     <>
-      <section className="border-b border-line bg-paper-raised">
+      <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:py-24">
           <div>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
@@ -85,20 +85,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-midnight">
+      <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="text-2xl font-bold text-cream sm:text-3xl">Serving the South Puget Sound</h2>
-          <p className="mt-4 max-w-2xl text-cream/80">
-            {serviceAreaCities.slice(0, 6).join(", ")}, and more — dispatched from a local base, not a
-            regional call center.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/service-area"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-cream px-6 py-3 text-base font-semibold text-cream hover:bg-cream hover:text-jet"
-            >
-              View Full Coverage Area
-            </Link>
+          <div className="rounded-2xl bg-paper-raised p-8 sm:p-12">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">Serving the South Puget Sound</h2>
+            <p className="mt-4 max-w-2xl text-ink/70">
+              {serviceAreaCities.slice(0, 6).join(", ")}, and more — dispatched from a local base, not a
+              regional call center.
+            </p>
+            <div className="mt-8">
+              <Link
+                href="/service-area"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-ink px-6 py-3 text-base font-semibold text-ink hover:bg-ink hover:text-paper"
+              >
+                View Full Coverage Area
+              </Link>
+            </div>
           </div>
         </div>
       </section>

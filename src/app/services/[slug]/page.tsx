@@ -49,7 +49,7 @@ export default async function ServicePage({
 
   return (
     <>
-      <section className="border-b border-line bg-paper-raised">
+      <section className="border-b border-line">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-cream">
             <Icon className="h-9 w-9 text-midnight" />
@@ -76,10 +76,12 @@ export default async function ServicePage({
         </ol>
       </section>
 
-      <section className="border-y border-line bg-midnight">
+      <section className="border-y border-line">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <h2 className="text-2xl font-bold text-ink">Insurance &amp; Billing</h2>
-          <p className="mt-4 text-ink/70">{content.insurance}</p>
+          <div className="rounded-2xl bg-paper-raised p-8 sm:p-12">
+            <h2 className="text-2xl font-bold text-ink">Insurance &amp; Billing</h2>
+            <p className="mt-4 text-ink/70">{content.insurance}</p>
+          </div>
         </div>
       </section>
 

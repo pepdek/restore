@@ -17,7 +17,7 @@ const faqs = [
 export default function InsuranceClaimsPage() {
   return (
     <>
-      <section className="border-b border-line bg-paper-raised">
+      <section className="border-b border-line">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Insurance Claims &amp; Direct Billing</h1>
           <p className="mt-4 text-lg text-ink/70">
