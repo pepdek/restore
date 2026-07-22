@@ -59,5 +59,6 @@ export const serviceAreaCities = [
 
 export const navLinks = [
   { href: "/service-area", label: "Service Area" },
+  { href: "/insurance-claims", label: "Insurance" },
   { href: "/about", label: "About" },
 ];

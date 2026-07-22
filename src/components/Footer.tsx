@@ -4,7 +4,7 @@ import { navLinks, serviceAreaCities, services, site } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-line bg-jet text-cream/80">
+    <footer className="mt-24 bg-midnight text-cream/80">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
           <Logo className="text-xl" />
@@ -31,7 +31,7 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold text-cream">Company</p>
           <ul className="mt-3 space-y-2 text-sm">
-            {[...navLinks, { href: "/contact", label: "Contact" }, { href: "/insurance-claims", label: "Insurance Claims" }].map(
+            {[...navLinks, { href: "/careers", label: "Careers" }, { href: "/contact", label: "Contact" }].map(
               (link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-cream">
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-cream/10">
+      <div className="border-t border-cream/10 pb-16 lg:pb-0">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
             © {new Date().getFullYear()} {site.name}. IICRC Certified · Licensed &amp; Insured · {site.license}

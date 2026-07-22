@@ -8,7 +8,7 @@ export default function LeadForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-lg border border-green bg-cream p-6 text-jet">
+      <div className="rounded-lg border-2 border-midnight bg-paper-raised p-6 text-jet">
         Thanks — we&rsquo;ve received your request and a technician will follow up shortly. For anything urgent,
         please call instead.
       </div>
@@ -49,7 +49,7 @@ export default function LeadForm() {
             name="name"
             type="text"
             required
-            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
+            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function LeadForm() {
             name="phone"
             type="tel"
             required
-            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
+            className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function LeadForm() {
           name="address"
           type="text"
           required
-          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
+          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
         />
       </div>
       <div>
@@ -86,7 +86,7 @@ export default function LeadForm() {
           name="message"
           rows={4}
           required
-          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-green"
+          className="mt-1 w-full rounded-md border border-line bg-paper-raised px-3 py-2 text-ink outline-none focus:border-midnight"
         />
       </div>
       {error && (

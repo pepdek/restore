@@ -1,24 +1,26 @@
 @import "tailwindcss";
 
 /*
-  Brand system — exactly four colors, no derived shades:
-  Jet Black #252525 (60%, dominant background)
-  Midnight Blue #272757 (30%, card/section surfaces)
-  Cream #EEE1C6 (10%, deliberate highlight blocks)
-  Action Green #69BE28 — CTAs and text links only, never decorative icons/fills.
-  Muted text uses opacity on cream/jet, never a new hex.
+  Brand system — SERVPRO-style tonal mapping onto our four colors:
+  White/Cream = clean dominant backgrounds (their white)
+  Midnight Blue #272757 = structural brand color: header, footer, feature
+    bands, text links on light surfaces (their green)
+  Action Green #69BE28 = CTA buttons and highlights only (their orange) —
+  fails contrast as text on light backgrounds, so never used as bare text
+  outside buttons or dark surfaces.
+  Jet Black #252525 = body text on light surfaces.
 */
 :root {
-  --background: #252525;
-  --foreground: #eee1c6;
+  --background: #eee1c6;
+  --foreground: #252525;
 
   --color-jet: #252525;
-  --color-ink: #eee1c6;
+  --color-ink: #252525;
 
   --color-cream: #eee1c6;
-  --color-paper: #252525;
-  --color-paper-raised: #272757;
-  --color-line: rgba(238, 225, 198, 0.15);
+  --color-paper: #eee1c6;
+  --color-paper-raised: #ffffff;
+  --color-line: rgba(37, 37, 37, 0.12);
 
   --color-midnight: #272757;
 

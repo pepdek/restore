@@ -30,14 +30,14 @@ export default function ServicesHub() {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              className="rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-green"
+              className="rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-midnight"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-cream">
                 <Icon className="h-8 w-8 text-midnight" />
               </div>
               <h2 className="mt-4 text-lg font-bold text-ink">{s.name}</h2>
               <p className="mt-2 text-sm text-ink/70">{s.blurb}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-green">Learn more →</span>
+              <span className="mt-4 inline-block text-sm font-semibold text-midnight">Learn more →</span>
             </Link>
           );
         })}
