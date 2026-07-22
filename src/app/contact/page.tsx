@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
         <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Contact Restora</h1>
-        <p className="mt-4 text-lg text-ink-light">
+        <p className="mt-4 text-lg text-ink/70">
           Phone is fastest for anything urgent. The form below is for non-emergency questions or to schedule an
           assessment.
         </p>
@@ -35,7 +35,7 @@ export default function ContactPage() {
           <div>
             <div className="rounded-lg border border-line bg-paper-raised p-6">
               <p className="font-semibold text-ink">{site.name}</p>
-              <p className="mt-2 text-sm text-ink-light">{site.address}</p>
+              <p className="mt-2 text-sm text-ink/70">{site.address}</p>
               <a href={site.phoneHref} className="mt-2 block text-sm font-semibold text-green">
                 {site.phone}
               </a>

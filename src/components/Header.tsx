@@ -15,7 +15,7 @@ export default function Header() {
           <Logo className="text-2xl" />
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-ink-light lg:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-ink/70 lg:flex">
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -38,7 +38,7 @@ export default function Header() {
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    className="block px-4 py-2 text-ink hover:bg-midnight-light"
+                    className="block px-4 py-2 text-ink hover:bg-cream/10"
                   >
                     {s.name}
                   </Link>
@@ -62,7 +62,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={site.phoneHref}
-            className="flex items-center gap-2 rounded-md bg-green px-3 py-2 text-sm font-bold text-jet shadow-sm hover:bg-green-dark sm:px-4"
+            className="flex items-center gap-2 rounded-md bg-green px-3 py-2 text-sm font-bold text-jet shadow-sm hover:opacity-90 sm:px-4"
           >
             <span aria-hidden>☎</span>
             <span className="hidden sm:inline">{site.phone}</span>

@@ -22,7 +22,7 @@ export default function ServiceAreaPage() {
       <section className="border-b border-line bg-paper-raised">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Service Area</h1>
-          <p className="mt-4 text-lg text-ink-light">
+          <p className="mt-4 text-lg text-ink/70">
             Restora dispatches locally across the South Puget Sound. Coverage list below is current as of publish —
             call to confirm service at your address.
           </p>
@@ -35,7 +35,7 @@ export default function ServiceAreaPage() {
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {serviceAreaCities.map((city) => (
-            <div key={city} className="rounded-md border border-line bg-paper-raised px-4 py-3 text-ink-light">
+            <div key={city} className="rounded-md border border-line bg-paper-raised px-4 py-3 text-ink/70">
               {city}, WA
             </div>
           ))}

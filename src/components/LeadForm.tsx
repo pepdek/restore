@@ -94,7 +94,7 @@ export default function LeadForm() {
       )}
       <button
         type="submit"
-        className="rounded-md bg-green px-6 py-3 font-semibold text-jet hover:bg-green-dark"
+        className="rounded-md bg-green px-6 py-3 font-semibold text-jet hover:opacity-90"
       >
         Request a Callback
       </button>

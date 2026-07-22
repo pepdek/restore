@@ -20,7 +20,7 @@ export default function InsuranceClaimsPage() {
       <section className="border-b border-line bg-paper-raised">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Insurance Claims &amp; Direct Billing</h1>
-          <p className="mt-4 text-lg text-ink-light">
+          <p className="mt-4 text-lg text-ink/70">
             Most restoration claims come down to one question: will the documentation hold up. Here&rsquo;s how our
             process works with your insurance carrier, in plain language.
           </p>
@@ -34,20 +34,20 @@ export default function InsuranceClaimsPage() {
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
             <h2 className="font-bold text-ink">1. Start the claim</h2>
-            <p className="mt-2 text-sm text-ink-light">
+            <p className="mt-2 text-sm text-ink/70">
               Call your insurance carrier (or ask us to help) to open a claim and get a claim number.
             </p>
           </div>
           <div>
             <h2 className="font-bold text-ink">2. We document everything</h2>
-            <p className="mt-2 text-sm text-ink-light">
+            <p className="mt-2 text-sm text-ink/70">
               Photos, moisture logs, and a written scope are collected from the first hour and shared with your
               adjuster.
             </p>
           </div>
           <div>
             <h2 className="font-bold text-ink">3. We bill your carrier directly</h2>
-            <p className="mt-2 text-sm text-ink-light">
+            <p className="mt-2 text-sm text-ink/70">
               With a signed direction to pay, we invoice your insurer for the approved scope. You typically only pay
               your deductible.
             </p>

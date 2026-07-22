@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="border-b border-line bg-paper-raised">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">About Restora</h1>
-          <p className="mt-4 text-lg text-ink-light">
+          <p className="mt-4 text-lg text-ink/70">
             National restoration chains sell you a franchise territory and a call center. We&rsquo;re a local team
             that answers our own phones, drives our own trucks, and stands behind our own work.
           </p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
         <h2 className="text-2xl font-bold text-ink">Local, Not a Franchise</h2>
-        <p className="mt-4 text-ink-light">
+        <p className="mt-4 text-ink/70">
           Franchise restoration brands look consistent from the outside, but the crew that shows up is often a
           subcontractor operating under a licensing agreement, with response times set by a national dispatch queue.
           Restora is independently owned in Tacoma. The person who answers your call, the technician who shows up,
@@ -38,19 +38,19 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="border-y border-line bg-midnight-light">
+      <section className="border-y border-line bg-midnight">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Certifications &amp; Licensing</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {credentials.map((c) => (
               <div key={c.title}>
                 <h3 className="font-bold text-ink">{c.title}</h3>
-                <p className="mt-2 text-sm text-ink-light">{c.body}</p>
+                <p className="mt-2 text-sm text-ink/70">{c.body}</p>
               </div>
             ))}
           </div>
 
-          <h3 className="mt-12 text-sm font-semibold uppercase tracking-wide text-ink-light">
+          <h3 className="mt-12 text-sm font-semibold uppercase tracking-wide text-ink/70">
             Regulatory &amp; Industry Affiliations
           </h3>
           <PartnerLogos />
