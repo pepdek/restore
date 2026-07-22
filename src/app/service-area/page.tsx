@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
+import HeroImage from "@/components/HeroImage";
 import MapPlaceholder from "@/components/MapPlaceholder";
+import { images } from "@/lib/images";
 import { serviceAreaCities, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -20,15 +22,18 @@ export default function ServiceAreaPage() {
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
-          <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Service Area</h1>
-          <p className="mt-4 text-lg text-ink/70">
-            RESTORA dispatches locally across the South Puget Sound. Coverage list below is current as of publish —
-            call to confirm service at your address.
-          </p>
-          <div className="mt-6">
-            <CallCta />
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
+          <div>
+            <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Service Area</h1>
+            <p className="mt-4 text-lg text-ink/70">
+              RESTORA dispatches locally across the South Puget Sound. Coverage list below is current as of publish
+              — call to confirm service at your address.
+            </p>
+            <div className="mt-6">
+              <CallCta />
+            </div>
           </div>
+          <HeroImage image={images.serviceArea} priority className="aspect-[4/3] md:order-last" />
         </div>
       </section>
 

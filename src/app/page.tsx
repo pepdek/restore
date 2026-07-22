@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CallCta } from "@/components/Cta";
+import HeroImage from "@/components/HeroImage";
 import TrustBar from "@/components/TrustBar";
 import {
   ClockIcon,
@@ -12,6 +13,7 @@ import {
   WaterIcon,
 } from "@/components/icons";
 import { caseStudies } from "@/lib/caseStudies";
+import { images } from "@/lib/images";
 import { serviceAreaCities, services } from "@/lib/site";
 
 const serviceIcons = {
@@ -25,7 +27,7 @@ export default function Home() {
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:py-28 sm:px-6 md:grid-cols-2 md:items-center md:py-24">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
           <div>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
               The Right Choice in Cleanup &amp; Restoration
@@ -34,31 +36,34 @@ export default function Home() {
               When you call a national franchise, you don&rsquo;t know who&rsquo;s showing up. When you call
               RESTORA, you already do.
             </p>
-            <p className="mt-4 text-ink/70">
+            <p className="mt-4 hidden text-ink/70 sm:block">
               The same local team, the same standard, every job documented and verified — from first call to
               final invoice, so you and your adjuster always know exactly where things stand.
             </p>
-            <div className="mt-8">
+            <div className="mt-6 sm:mt-8">
               <CallCta />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-midnight p-8">
-            <ShieldIcon className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 text-cream/5" />
-            <p className="text-sm font-semibold uppercase tracking-wide text-cream">Why Choose RESTORA</p>
-            <ul className="mt-5 space-y-4">
-              {[
-                { Icon: ShieldIcon, text: "One local team, every time — never a subcontractor roulette" },
-                { Icon: DocumentIcon, text: "Every job documented and verifiable, start to finish" },
-                { Icon: PhoneIcon, text: "Direct insurance billing, no surprises" },
-                { Icon: ClockIcon, text: "Response time tracked and logged on every dispatch" },
-              ].map(({ Icon, text }) => (
-                <li key={text} className="flex items-center gap-3 text-cream">
-                  <Icon className="h-6 w-6 shrink-0 text-white" />
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <HeroImage image={images.home} priority className="aspect-[4/3] md:order-last" />
+        </div>
+      </section>
+
+      <section className="border-b border-line bg-midnight">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-wide text-cream">Why Choose RESTORA</p>
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { Icon: ShieldIcon, text: "One local team, every time — never a subcontractor roulette" },
+              { Icon: DocumentIcon, text: "Every job documented and verifiable, start to finish" },
+              { Icon: PhoneIcon, text: "Direct insurance billing, no surprises" },
+              { Icon: ClockIcon, text: "Response time tracked and logged on every dispatch" },
+            ].map(({ Icon, text }) => (
+              <li key={text} className="flex items-start gap-3 text-cream">
+                <Icon className="h-6 w-6 shrink-0 text-white" />
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

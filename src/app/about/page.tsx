@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
+import HeroImage from "@/components/HeroImage";
 import PartnerLogos from "@/components/PartnerLogos";
+import { images } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,12 +20,15 @@ export default function AboutPage() {
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
-          <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">About RESTORA</h1>
-          <p className="mt-4 text-lg text-ink/70">
-            National restoration chains sell you a franchise territory and a call center. We&rsquo;re a local team
-            that answers our own phones, drives our own trucks, and stands behind our own work.
-          </p>
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
+          <div>
+            <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">About RESTORA</h1>
+            <p className="mt-4 text-lg text-ink/70">
+              National restoration chains sell you a franchise territory and a call center. We&rsquo;re a local team
+              that answers our own phones, drives our own trucks, and stands behind our own work.
+            </p>
+          </div>
+          <HeroImage image={images.about} priority className="aspect-[4/3] md:order-last" />
         </div>
       </section>
 

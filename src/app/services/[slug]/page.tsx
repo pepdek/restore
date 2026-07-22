@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import Faq from "@/components/Faq";
+import HeroImage from "@/components/HeroImage";
 import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
+import { images } from "@/lib/images";
 import { serviceContent } from "@/lib/serviceContent";
 import { site } from "@/lib/site";
 
@@ -11,6 +13,13 @@ const serviceIcons = {
   "fire-damage": FireIcon,
   "mold-remediation": MoldIcon,
   reconstruction: ReconstructionIcon,
+} as const;
+
+const serviceHeroImages = {
+  "water-damage": images.waterDamage,
+  "fire-damage": images.fireDamage,
+  "mold-remediation": images.moldRemediation,
+  reconstruction: images.reconstruction,
 } as const;
 
 export function generateStaticParams() {
@@ -37,6 +46,7 @@ export default async function ServicePage({
   const content = serviceContent[slug];
   if (!content) notFound();
   const Icon = serviceIcons[slug as keyof typeof serviceIcons];
+  const heroImage = serviceHeroImages[slug as keyof typeof serviceHeroImages];
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -50,15 +60,18 @@ export default async function ServicePage({
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
-          <div className="shine flex h-16 w-16 items-center justify-center rounded-xl bg-paper-raised">
-            <Icon className="h-9 w-9 text-midnight" />
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
+          <div>
+            <div className="shine flex h-16 w-16 items-center justify-center rounded-xl bg-paper-raised">
+              <Icon className="h-9 w-9 text-midnight" />
+            </div>
+            <h1 className="mt-5 text-3xl font-extrabold text-ink sm:text-4xl">{content.name}</h1>
+            <p className="mt-4 text-lg text-ink/70">{content.whyItMatters}</p>
+            <div className="mt-6">
+              <CallCta />
+            </div>
           </div>
-          <h1 className="mt-5 text-3xl font-extrabold text-ink sm:text-4xl">{content.name}</h1>
-          <p className="mt-4 text-lg text-ink/70">{content.whyItMatters}</p>
-          <div className="mt-6">
-            <CallCta />
-          </div>
+          <HeroImage image={heroImage} priority className="aspect-[4/3] md:order-last" />
         </div>
       </section>
 

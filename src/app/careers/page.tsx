@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import HeroImage from "@/components/HeroImage";
 import { ClockIcon, DocumentIcon, PhoneIcon, ShieldIcon } from "@/components/icons";
+import { images } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,12 +20,15 @@ export default function CareersPage() {
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
-          <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Careers at RESTORA</h1>
-          <p className="mt-4 text-lg text-ink/70">
-            We&rsquo;re a locally owned restoration company in Tacoma, hiring technicians and support staff who want
-            real training and steady local work — not a franchise territory.
-          </p>
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
+          <div>
+            <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Careers at RESTORA</h1>
+            <p className="mt-4 text-lg text-ink/70">
+              We&rsquo;re a locally owned restoration company in Tacoma, hiring technicians and support staff who
+              want real training and steady local work — not a franchise territory.
+            </p>
+          </div>
+          <HeroImage image={images.careers} priority className="aspect-[4/3] md:order-last" />
         </div>
       </section>
 
