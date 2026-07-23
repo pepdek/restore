@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import { resourceLinks } from "@/lib/resources";
 import { navLinks, serviceAreaCities, services, site } from "@/lib/site";
 
 export default function Footer() {
   return (
     <footer className="mt-24 bg-midnight text-cream/80">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-5">
         <div>
           <Logo className="text-xl" />
           <p className="mt-2 text-sm">{site.tagline}</p>
@@ -45,6 +46,24 @@ export default function Footer() {
                 </li>
               ),
             )}
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold text-cream">Resources</p>
+          <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link href="/resources" className="hover:text-cream">
+                Resources Hub
+              </Link>
+            </li>
+            {resourceLinks.map((r) => (
+              <li key={r.slug}>
+                <Link href={r.href} className="hover:text-cream">
+                  {r.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 

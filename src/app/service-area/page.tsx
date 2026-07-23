@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { CallCta } from "@/components/Cta";
 import HeroImage from "@/components/HeroImage";
 import MapPlaceholder from "@/components/MapPlaceholder";
@@ -21,6 +22,8 @@ const localBusinessJsonLd = {
 export default function ServiceAreaPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Service Area", href: "/service-area" }]} />
+
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
           <div>

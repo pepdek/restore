@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ComparisonBlock from "@/components/ComparisonBlock";
 import { CallCta } from "@/components/Cta";
 import DoDontChecklist from "@/components/DoDontChecklist";
@@ -29,6 +30,26 @@ const serviceHeroImages = {
   reconstruction: images.reconstruction,
 } as const;
 
+const relatedResources: Record<string, { href: string; label: string }[]> = {
+  "water-damage": [
+    { href: "/resources/for-adjusters", label: "Real-time documentation for adjusters on water damage claims" },
+    { href: "/resources/first-24-hours", label: "The First 24 Hours guide for water damage" },
+    { href: "/resources/for-property-managers", label: "Standing-Response Agreements for property managers" },
+  ],
+  "fire-damage": [
+    { href: "/resources/for-adjusters", label: "Real-time documentation for adjusters on fire damage claims" },
+    { href: "/resources/first-24-hours", label: "The First 24 Hours guide for fire and smoke damage" },
+  ],
+  "mold-remediation": [
+    { href: "/resources/for-adjusters", label: "Scope sheets and clearance documentation for mold claims" },
+    { href: "/resources/first-24-hours", label: "The First 24 Hours guide for a mold problem" },
+  ],
+  reconstruction: [
+    { href: "/resources/for-agents-and-realtors", label: "Fast-Track reconstruction assessments for real estate deadlines" },
+    { href: "/resources/for-property-managers", label: "Standing-Response Agreements for property managers" },
+  ],
+};
+
 export function generateStaticParams() {
   return Object.keys(serviceContent).map((slug) => ({ slug }));
 }
@@ -55,6 +76,7 @@ export default async function ServicePage({
   const Icon = serviceIcons[slug as keyof typeof serviceIcons];
   const heroImage = serviceHeroImages[slug as keyof typeof serviceHeroImages];
   const relatedServices = services.filter((s) => s.slug !== slug);
+  const resources = relatedResources[slug] ?? [];
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -67,6 +89,8 @@ export default async function ServicePage({
 
   return (
     <>
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: content.name, href: `/services/${slug}` }]} />
+
       {/* 1. Hero */}
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 sm:py-20 sm:px-6 md:grid-cols-2 md:items-center lg:py-28">
@@ -172,6 +196,23 @@ export default async function ServicePage({
               Insurance Claims &amp; Direct Billing
             </Link>
           </div>
+
+          {resources.length > 0 && (
+            <>
+              <h2 className="mt-12 text-xl font-bold text-ink">Resources for This Job Type</h2>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {resources.map((r) => (
+                  <Link
+                    key={r.href}
+                    href={r.href}
+                    className="rounded-lg border border-line bg-paper-raised p-4 text-sm font-semibold text-midnight hover:border-midnight"
+                  >
+                    {r.label}
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
