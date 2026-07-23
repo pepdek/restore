@@ -31,7 +31,12 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold text-cream">Company</p>
           <ul className="mt-3 space-y-2 text-sm">
-            {[...navLinks, { href: "/careers", label: "Careers" }, { href: "/contact", label: "Contact" }].map(
+            {[
+              ...navLinks,
+              { href: "/our-guarantee", label: "Our Guarantee" },
+              { href: "/careers", label: "Careers" },
+              { href: "/contact", label: "Contact" },
+            ].map(
               (link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-cream">
