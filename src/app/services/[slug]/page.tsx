@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import Faq from "@/components/Faq";
 import HeroImage from "@/components/HeroImage";
+import WhyRestora from "@/components/WhyRestora";
 import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
 import { images } from "@/lib/images";
 import { serviceContent } from "@/lib/serviceContent";
@@ -97,6 +98,8 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      <WhyRestora />
 
       <Faq items={content.faqs} />
 

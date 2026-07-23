@@ -1,14 +1,16 @@
 const LETTERS = ["R", "E", "S", "T", "O", "R"] as const;
 
-export default function Logo({
-  on = "dark",
-  className,
-}: {
+type LogoProps = {
+  /** Background the mark sits on. "dark" = solid white (navy would be invisible on navy). */
   on?: "dark" | "light";
+  /** Small/constrained placements (favicon, tiny footer use) — solid navy, no two-tone. */
+  compact?: boolean;
   className?: string;
-}) {
-  const letterColor = on === "dark" ? "text-white" : "text-green";
-  const aColor = on === "dark" ? "text-white" : "text-midnight";
+};
+
+export default function Logo({ on = "dark", compact = false, className }: LogoProps) {
+  const letterColor = on === "dark" ? "text-white" : "text-midnight";
+  const aColor = on === "dark" ? "text-white" : compact ? "text-midnight" : "text-green";
 
   return (
     <span

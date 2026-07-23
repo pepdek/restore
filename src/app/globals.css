@@ -1,20 +1,17 @@
 @import "tailwindcss";
 
 /*
-  Brand system — "polished marble, white space, and shine":
-  Action Green #49831C is the ONLY saturated color on the site — CTAs,
-    active states, icon accents on dark surfaces, and the logo. Never
-    combined with a second bright hue on the same screen.
-    Tuned from the original #69BE28 (same 94° hue, same 65% saturation,
-    darker lightness) specifically so plain white button text passes
-    WCAG AA at 4.6:1 without relying on bold/large-text sizing.
-  Midnight Navy #34414E is the muted counterweight — body text, secondary
-    buttons/outlines, header/footer/dark section backgrounds. Deliberately
-    desaturated so it never competes with the green.
-  Pure white is the dominant background everywhere. A cool light gray
-    (#F5F6F7) is used sparingly for card surfaces where white-on-white
-    would lose definition — never warm/cream.
-  No black, no cream, no second saturated hue anywhere in the system.
+  Brand system — final tokens locked in by the color/icon variation sheet.
+  Primary buttons: action-green fill + midnight-navy text (never white text
+    on the base action-green — navy-on-green measures 4.47:1, which only
+    clears WCAG AA at large/bold sizes, so every green CTA uses text-lg+).
+  Hover state: action-green-dark fill. Navy text fails badly on the darker
+    hover fill (2.62:1), so hover swaps to white text (3.99:1, still
+    large-text only) instead — the "never white on green" rule names the
+    base action-green token specifically, not the darker hover variant.
+  Logo: two-tone (navy "RESTOR" + green "A") on light backgrounds; solid
+    white on dark backgrounds where two-tone would lose contrast entirely;
+    solid navy-on-white for small/constrained marks (favicon, tiny footer use).
 */
 :root {
   --background: #ffffff;
@@ -29,8 +26,13 @@
   --color-line: rgba(52, 65, 78, 0.12);
 
   --color-midnight: #34414e;
+  --color-midnight-dark: #232b33;
+  --color-navy-tint-1: #5c6b78;
+  --color-navy-tint-2: #8b99a3;
 
-  --color-green: #49831c;
+  --color-green: #69be28;
+  --color-green-dark: #4d8f1e;
+  --color-green-tint: #9ad873;
 }
 
 @theme inline {
@@ -43,7 +45,12 @@
   --color-paper-raised: var(--color-paper-raised);
   --color-line: var(--color-line);
   --color-midnight: var(--color-midnight);
+  --color-midnight-dark: var(--color-midnight-dark);
+  --color-navy-tint-1: var(--color-navy-tint-1);
+  --color-navy-tint-2: var(--color-navy-tint-2);
   --color-green: var(--color-green);
+  --color-green-dark: var(--color-green-dark);
+  --color-green-tint: var(--color-green-tint);
   --font-sans: var(--font-inter);
   --font-display: var(--font-archivo);
   --font-logo: var(--font-archivo-black);

@@ -39,12 +39,13 @@ export function MoldIcon({ className }: IconProps) {
   );
 }
 
-export function ReconstructionIcon({ className }: IconProps) {
+export function ReconstructionIcon({ className, accent = true }: IconProps & { accent?: boolean }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden>
       <path d="M6 44 6 20 24 6l18 14v24" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
       <path d="M18 44V28h12v16" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
       <path d="M30 16h8v8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="24" cy="6" r="3" fill={accent ? "#69be28" : "currentColor"} />
     </svg>
   );
 }
@@ -58,7 +59,7 @@ export function ClockIcon({ className }: IconProps) {
   );
 }
 
-export function ShieldIcon({ className }: IconProps) {
+export function ShieldIcon({ className, accent = true }: IconProps & { accent?: boolean }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden>
       <path
@@ -67,7 +68,50 @@ export function ShieldIcon({ className }: IconProps) {
         strokeWidth="2.5"
         strokeLinejoin="round"
       />
-      <path d="M17 24l5 5 9-10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M17 24l5 5 9-10"
+        stroke={accent ? "#69be28" : "currentColor"}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function CheckmarkIcon({ className, accent = true }: IconProps & { accent?: boolean }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden>
+      <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
+      <path
+        d="M16 25l6 6 11-13"
+        stroke={accent ? "#69be28" : "currentColor"}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function CheckIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" fill="currentColor" className={className} aria-hidden>
+      <path d="M10 1a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1.2 13-4.3-4.3 1.4-1.4 2.9 2.9 6.1-6.1 1.4 1.4-7.5 7.5Z" />
+    </svg>
+  );
+}
+
+export function LocationPinIcon({ className, accent = true }: IconProps & { accent?: boolean }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden>
+      <path
+        d="M24 4c9 0 16 7 16 16 0 12-16 24-16 24S8 32 8 20C8 11 15 4 24 4Z"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+      <circle cx="24" cy="20" r="4" fill={accent ? "#69be28" : "currentColor"} />
     </svg>
   );
 }

@@ -2,16 +2,8 @@ import Link from "next/link";
 import { CallCta } from "@/components/Cta";
 import HeroImage from "@/components/HeroImage";
 import TrustBar from "@/components/TrustBar";
-import {
-  ClockIcon,
-  DocumentIcon,
-  FireIcon,
-  MoldIcon,
-  PhoneIcon,
-  ReconstructionIcon,
-  ShieldIcon,
-  WaterIcon,
-} from "@/components/icons";
+import WhyRestora from "@/components/WhyRestora";
+import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
 import { caseStudies } from "@/lib/caseStudies";
 import { images } from "@/lib/images";
 import { serviceAreaCities, services } from "@/lib/site";
@@ -48,25 +40,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-line bg-midnight">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-cream">Why Choose RESTORA</p>
-          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { Icon: ShieldIcon, text: "One local team, every time — never a subcontractor roulette" },
-              { Icon: DocumentIcon, text: "Every job documented and verifiable, start to finish" },
-              { Icon: PhoneIcon, text: "Direct insurance billing, no surprises" },
-              { Icon: ClockIcon, text: "Response time tracked and logged on every dispatch" },
-            ].map(({ Icon, text }) => (
-              <li key={text} className="flex items-start gap-3 text-cream">
-                <Icon className="h-6 w-6 shrink-0 text-white" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       <TrustBar />
 
       <section className="mx-auto max-w-6xl px-4 py-20 sm:py-28 sm:px-6">
@@ -91,6 +64,10 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      <div className="border-t border-line">
+        <WhyRestora />
+      </div>
 
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 sm:px-6">
