@@ -16,6 +16,14 @@ const values = [
   { Icon: PhoneIcon, title: "Direct access to ownership", body: "A locally owned shop means the owner is reachable, not a regional office three states away." },
 ];
 
+const openPositions = [
+  { title: "Water Damage Technician", teaser: "Front-line extraction, drying, and moisture documentation on residential and commercial water calls." },
+  { title: "Restoration Supervisor / Crew Chief", teaser: "Lead a crew on-site, own the job from first call to final walkthrough, and keep the documentation standard tight." },
+  { title: "Construction Superintendent / Project Manager", teaser: "Run the rebuild phase of mitigation jobs — scope, scheduling, and trade coordination under one roof." },
+  { title: "Construction Estimator / Project Manager", teaser: "Turn approved mitigation scope into accurate rebuild estimates that hold up with adjusters." },
+  { title: "Project Coordinator", teaser: "Keep job files, scheduling, and insurer communication organized across active projects." },
+];
+
 export default function CareersPage() {
   return (
     <>
@@ -46,25 +54,38 @@ export default function CareersPage() {
       </section>
 
       <section className="border-t border-line">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 text-center sm:px-6">
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Open Positions</h2>
           <p className="mt-3 text-ink/70">
-            {/* ponytail: no ATS integration yet — direct applicants to email/phone until a real job board is wired up */}
-            We don&rsquo;t have open roles posted online yet. Send your resume directly and we&rsquo;ll reach out
-            when a position opens.
+            {/* ponytail: no ATS integration yet — applicants email/call directly until a real job board is wired up */}
+            All positions are based in Tacoma, WA. Email your resume and the role you&rsquo;re interested in.
           </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-8 space-y-4">
+            {openPositions.map((p) => (
+              <div
+                key={p.title}
+                className="shine flex flex-col justify-between gap-3 rounded-lg border border-line bg-paper-raised p-6 sm:flex-row sm:items-center"
+              >
+                <div>
+                  <h3 className="font-bold text-ink">{p.title}</h3>
+                  <p className="mt-1 text-sm text-ink/70">{p.teaser}</p>
+                  <p className="mt-1 text-sm text-ink/70">Tacoma, WA</p>
+                </div>
+                <a
+                  href={`mailto:${site.email}?subject=Application: ${encodeURIComponent(p.title)}`}
+                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md border border-ink px-5 py-2.5 text-sm font-semibold text-ink hover:bg-ink hover:text-paper"
+                >
+                  Apply
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
             <a
               href={`mailto:${site.email}?subject=Careers%20Inquiry`}
               className="shine inline-flex items-center justify-center gap-2 rounded-md bg-green px-6 py-3 text-lg text-white hover:opacity-90"
             >
               Email Your Resume
-            </a>
-            <a
-              href={site.phoneHref}
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink px-6 py-3 text-base font-semibold text-ink hover:bg-ink hover:text-paper"
-            >
-              {site.phone}
             </a>
           </div>
         </div>
