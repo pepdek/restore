@@ -57,6 +57,11 @@ export default function Footer() {
                 Resources Hub
               </Link>
             </li>
+            <li>
+              <Link href="/partner-referral" className="font-semibold text-cream hover:underline">
+                Quick Referral Tool
+              </Link>
+            </li>
             {resourceLinks.map((r) => (
               <li key={r.slug}>
                 <Link href={r.href} className="hover:text-cream">

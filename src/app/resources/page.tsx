@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
-import { CheckIcon, ClockIcon, DocumentIcon, ShieldIcon } from "@/components/icons";
+import { CheckIcon, ClockIcon, DocumentIcon, PhoneIcon, ShieldIcon } from "@/components/icons";
 import { resourceLinks } from "@/lib/resources";
 import { site } from "@/lib/site";
 
@@ -55,6 +55,24 @@ export default function ResourcesPage() {
             partners working alongside RESTORA on water damage, fire damage, mold remediation, and reconstruction
             jobs across the South Puget Sound.
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-line bg-midnight">
+        <div className="mx-auto max-w-4xl px-4 py-12 text-center sm:px-6">
+          <PhoneIcon className="mx-auto h-10 w-10 text-green" />
+          <h2 className="mt-3 text-2xl font-bold text-cream">Quick Referral Tool</h2>
+          <p className="mt-2 text-cream/80">
+            Trade partners on-site: send us a homeowner referral in under 20 seconds, right from your phone.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <Link
+              href="/partner-referral"
+              className="shine inline-flex items-center justify-center gap-2 rounded-md bg-green px-6 py-3 text-xl font-bold text-midnight hover:bg-green-dark hover:text-white"
+            >
+              Submit a Referral
+            </Link>
+          </div>
         </div>
       </section>
 

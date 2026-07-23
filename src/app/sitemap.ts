@@ -17,6 +17,7 @@ const staticRoutes = [
   "/resources",
   "/resources/for-adjusters",
   "/resources/for-adjusters/demo",
+  "/partner-referral",
   "/legal/safety-data-sheets",
   "/legal/terms",
   "/legal/privacy",
