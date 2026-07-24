@@ -8,6 +8,7 @@ import DoDontChecklist from "@/components/DoDontChecklist";
 import Faq from "@/components/Faq";
 import GuaranteeBlock from "@/components/GuaranteeBlock";
 import HeroImage from "@/components/HeroImage";
+import MidPageCta from "@/components/MidPageCta";
 import OfferBlock from "@/components/OfferBlock";
 import QuickLinks from "@/components/QuickLinks";
 import WhyRestora from "@/components/WhyRestora";
@@ -135,6 +136,8 @@ export default async function ServicePage({
 
       {/* 6. Do / Don't checklist */}
       <DoDontChecklist doList={content.doList} dontList={content.dontList} />
+
+      <MidPageCta />
 
       {/* 7. Process */}
       <section id="process" className="border-t border-line">

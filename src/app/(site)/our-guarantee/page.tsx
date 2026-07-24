@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import Faq from "@/components/Faq";
+import MidPageCta from "@/components/MidPageCta";
 import { ShieldIcon } from "@/components/icons";
 import { serviceContent } from "@/lib/serviceContent";
 
@@ -66,6 +67,8 @@ export default function OurGuaranteePage() {
           ))}
         </div>
       </section>
+
+      <MidPageCta />
 
       <Faq items={faqs} />
     </>

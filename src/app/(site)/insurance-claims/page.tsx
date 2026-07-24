@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import Faq from "@/components/Faq";
+import MidPageCta from "@/components/MidPageCta";
 
 export const metadata: Metadata = {
   title: "Insurance Claims & Direct Billing",
@@ -54,6 +55,8 @@ export default function InsuranceClaimsPage() {
           </div>
         </div>
       </section>
+
+      <MidPageCta />
 
       <Faq items={faqs} />
     </>

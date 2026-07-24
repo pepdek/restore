@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { CallCta, RequestServicesCta } from "@/components/Cta";
+import { CallCta } from "@/components/Cta";
 import HeroImage from "@/components/HeroImage";
+import MidPageCta from "@/components/MidPageCta";
 import TrustBar from "@/components/TrustBar";
 import WhyRestora from "@/components/WhyRestora";
 import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
@@ -32,9 +33,8 @@ export default function Home() {
               The same local team, the same standard, every job documented and verified — from first call to
               final invoice, so you and your adjuster always know exactly where things stand.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+            <div className="mt-6 sm:mt-8">
               <CallCta />
-              <RequestServicesCta href="/schedule" />
             </div>
           </div>
           <HeroImage image={images.home} priority className="aspect-[4/3] md:order-last" />
@@ -69,6 +69,8 @@ export default function Home() {
       <div className="border-t border-line">
         <WhyRestora />
       </div>
+
+      <MidPageCta />
 
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 sm:px-6">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { CheckIcon, ClockIcon, ShieldIcon } from "@/components/icons";
+import MidPageCta from "@/components/MidPageCta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -70,6 +71,8 @@ export default function ForPropertyManagersPage() {
           , and mold and fire services we run on every RESTORA job.
         </p>
       </section>
+
+      <MidPageCta />
 
       <section className="border-t border-line bg-midnight">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">

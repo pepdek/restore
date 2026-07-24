@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { CheckIcon, FireIcon, MoldIcon, WaterIcon } from "@/components/icons";
+import MidPageCta from "@/components/MidPageCta";
 import PrintButton from "@/components/PrintButton";
 import { serviceContent } from "@/lib/serviceContent";
 import { site } from "@/lib/site";
@@ -83,6 +84,10 @@ export default function First24HoursPage() {
           </section>
         );
       })}
+
+      <div className="print:hidden">
+        <MidPageCta />
+      </div>
 
       <section className="border-t border-line bg-midnight print:hidden">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">

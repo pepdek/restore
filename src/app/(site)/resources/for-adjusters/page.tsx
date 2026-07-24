@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { CallCta } from "@/components/Cta";
 import { CheckIcon, ClockIcon, DocumentIcon, ShieldIcon } from "@/components/icons";
+import MidPageCta from "@/components/MidPageCta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -111,6 +112,8 @@ export default function ForAdjustersPage() {
           <p className="mt-3 text-xs text-ink/60">Placeholder data shown for format illustration only.</p>
         </div>
       </section>
+
+      <MidPageCta />
 
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
         <div className="flex items-center gap-3">

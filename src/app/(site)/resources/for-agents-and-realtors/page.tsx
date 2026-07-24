@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FastTrackForm from "@/components/FastTrackForm";
 import { ClockIcon, DocumentIcon } from "@/components/icons";
+import MidPageCta from "@/components/MidPageCta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -59,6 +60,8 @@ export default function ForAgentsAndRealtorsPage() {
           , just prioritized for transaction deadlines.
         </p>
       </section>
+
+      <MidPageCta />
 
       <section className="border-t border-line">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
 import HeroImage from "@/components/HeroImage";
+import MidPageCta from "@/components/MidPageCta";
 import PartnerLogos from "@/components/PartnerLogos";
 import { images } from "@/lib/images";
 import { site } from "@/lib/site";
@@ -42,6 +43,8 @@ export default function AboutPage() {
           to tracked response times instead of a national average.
         </p>
       </section>
+
+      <MidPageCta />
 
       <section className="border-y border-line">
         <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 sm:px-6">

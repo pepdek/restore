@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import MidPageCta from "@/components/MidPageCta";
 import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
 import { services } from "@/lib/site";
 
@@ -17,31 +18,35 @@ const serviceIcons = {
 
 export default function ServicesHub() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20 sm:py-28 sm:px-6">
-      <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Restoration Services</h1>
-      <p className="mt-4 max-w-2xl text-ink/70">
-        Every service below follows the same documented process — response tracked, damage logged, insurer billed
-        directly.
-      </p>
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {services.map((s) => {
-          const Icon = serviceIcons[s.slug as keyof typeof serviceIcons];
-          return (
-            <Link
-              key={s.slug}
-              href={`/services/${s.slug}`}
-              className="shine rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-midnight"
-            >
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-cream">
-                <Icon className="h-8 w-8 text-midnight" />
-              </div>
-              <h2 className="mt-4 text-lg font-bold text-ink">{s.name}</h2>
-              <p className="mt-2 text-sm text-ink/70">{s.blurb}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-midnight">Learn more →</span>
-            </Link>
-          );
-        })}
-      </div>
-    </section>
+    <>
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:py-28 sm:px-6">
+        <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">Restoration Services</h1>
+        <p className="mt-4 max-w-2xl text-ink/70">
+          Every service below follows the same documented process — response tracked, damage logged, insurer billed
+          directly.
+        </p>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {services.map((s) => {
+            const Icon = serviceIcons[s.slug as keyof typeof serviceIcons];
+            return (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className="shine rounded-lg border border-line bg-paper-raised p-6 transition-colors hover:border-midnight"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-cream">
+                  <Icon className="h-8 w-8 text-midnight" />
+                </div>
+                <h2 className="mt-4 text-lg font-bold text-ink">{s.name}</h2>
+                <p className="mt-2 text-sm text-ink/70">{s.blurb}</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-midnight">Learn more →</span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <MidPageCta />
+    </>
   );
 }

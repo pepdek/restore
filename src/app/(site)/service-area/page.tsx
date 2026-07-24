@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { CallCta } from "@/components/Cta";
 import HeroImage from "@/components/HeroImage";
 import MapPlaceholder from "@/components/MapPlaceholder";
+import MidPageCta from "@/components/MidPageCta";
 import { images } from "@/lib/images";
 import { serviceAreaCities, site } from "@/lib/site";
 
@@ -52,6 +53,8 @@ export default function ServiceAreaPage() {
         {/* ponytail: static embed placeholder, swap for a real Maps embed key once client confirms coverage */}
         <MapPlaceholder label="South Puget Sound coverage area" className="mt-10 h-72" />
       </section>
+
+      <MidPageCta />
 
       <script
         type="application/ld+json"

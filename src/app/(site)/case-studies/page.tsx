@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CallCta } from "@/components/Cta";
+import MidPageCta from "@/components/MidPageCta";
 import { FireIcon, MoldIcon, ReconstructionIcon, WaterIcon } from "@/components/icons";
 import { caseStudies } from "@/lib/caseStudies";
 
@@ -65,6 +66,8 @@ export default function CaseStudiesPage() {
           })}
         </div>
       </section>
+
+      <MidPageCta />
 
       <section className="border-t border-line">
         <div className="mx-auto max-w-4xl px-4 py-20 sm:py-28 text-center sm:px-6">

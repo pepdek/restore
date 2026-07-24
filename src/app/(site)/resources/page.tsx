@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
+import MidPageCta from "@/components/MidPageCta";
 import { CheckIcon, ClockIcon, DocumentIcon, PhoneIcon, ShieldIcon } from "@/components/icons";
 import { resourceLinks } from "@/lib/resources";
 import { site } from "@/lib/site";
@@ -99,6 +100,8 @@ export default function ResourcesPage() {
           </section>
         );
       })}
+
+      <MidPageCta />
 
       <Faq items={faqs} />
 

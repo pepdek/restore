@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { CallCta } from "@/components/Cta";
 import Logo from "@/components/Logo";
-import { navLinks, services, site } from "@/lib/site";
+import { navLinks, services } from "@/lib/site";
 
 export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -60,25 +61,9 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href={site.phoneHref}
-            className="hidden flex-col items-center justify-center gap-0.5 rounded-md bg-green px-3 py-1.5 text-midnight hover:bg-green-dark hover:text-white lg:flex"
-          >
-            <span className="text-xl font-bold uppercase tracking-wide">Call to Schedule</span>
-            <span className="text-xl font-bold">{site.phone}</span>
-          </a>
-          <Link
-            href="/schedule"
-            className="hidden rounded-md border border-cream px-4 py-2 text-sm font-semibold text-cream hover:bg-cream hover:text-jet md:inline-block"
-          >
-            Schedule Online
-          </Link>
-          <Link
-            href="/contact"
-            className="hidden rounded-md border border-cream px-4 py-2 text-sm font-semibold text-cream hover:bg-cream hover:text-jet md:inline-block"
-          >
-            Contact
-          </Link>
+          <div className="hidden lg:block">
+            <CallCta className="px-3 py-1.5" />
+          </div>
         </div>
       </div>
     </header>
