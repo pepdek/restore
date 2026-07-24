@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CallCta } from "@/components/Cta";
+import { CallCta, RequestServicesCta } from "@/components/Cta";
 import HeroImage from "@/components/HeroImage";
 import TrustBar from "@/components/TrustBar";
 import WhyRestora from "@/components/WhyRestora";
@@ -32,8 +32,9 @@ export default function Home() {
               The same local team, the same standard, every job documented and verified — from first call to
               final invoice, so you and your adjuster always know exactly where things stand.
             </p>
-            <div className="mt-6 sm:mt-8">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <CallCta />
+              <RequestServicesCta href="/schedule" />
             </div>
           </div>
           <HeroImage image={images.home} priority className="aspect-[4/3] md:order-last" />

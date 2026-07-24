@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Archivo, Archivo_Black, Inter } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import MobileCallBar from "@/components/MobileCallBar";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -59,9 +57,7 @@ export default function RootLayout({
       className={`${inter.variable} ${archivo.variable} ${archivoBlack.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <div className="flex flex-1 flex-col">{children}</div>
         <MobileCallBar />
         <script
           type="application/ld+json"

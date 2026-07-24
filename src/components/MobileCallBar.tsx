@@ -4,9 +4,10 @@ export default function MobileCallBar() {
   return (
     <a
       href={site.phoneHref}
-      className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-center gap-2 bg-green px-4 py-4 text-xl font-bold text-midnight hover:bg-green-dark hover:text-white shadow-[0_-2px_10px_rgba(0,0,0,0.15)] lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 flex flex-col items-center justify-center gap-0.5 bg-green py-2 text-midnight hover:bg-green-dark hover:text-white shadow-[0_-2px_10px_rgba(0,0,0,0.15)] lg:hidden"
     >
-      ☎ Call Now — {site.phone}
+      <span className="text-xl font-bold uppercase tracking-wide">Call to Schedule</span>
+      <span className="text-xl font-bold">{site.phone}</span>
     </a>
   );
 }

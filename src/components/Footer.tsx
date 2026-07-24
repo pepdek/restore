@@ -58,6 +58,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/schedule" className="font-semibold text-cream hover:underline">
+                Schedule Service
+              </Link>
+            </li>
+            <li>
               <Link href="/partner-referral" className="font-semibold text-cream hover:underline">
                 Quick Referral Tool
               </Link>
@@ -81,7 +86,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-cream/10 pb-16 lg:pb-0">
+      <div className="border-t border-cream/10 pb-24 lg:pb-0">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
             © {new Date().getFullYear()} {site.name}. IICRC Certified · Licensed &amp; Insured · {site.license}

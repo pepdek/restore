@@ -62,11 +62,17 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 rounded-md bg-green px-3 py-2 text-xl font-bold text-midnight hover:bg-green-dark hover:text-white lg:flex"
+            className="hidden flex-col items-center justify-center gap-0.5 rounded-md bg-green px-3 py-1.5 text-midnight hover:bg-green-dark hover:text-white lg:flex"
           >
-            <span aria-hidden>☎</span>
-            <span>{site.phone}</span>
+            <span className="text-xl font-bold uppercase tracking-wide">Call to Schedule</span>
+            <span className="text-xl font-bold">{site.phone}</span>
           </a>
+          <Link
+            href="/schedule"
+            className="hidden rounded-md border border-cream px-4 py-2 text-sm font-semibold text-cream hover:bg-cream hover:text-jet md:inline-block"
+          >
+            Schedule Online
+          </Link>
           <Link
             href="/contact"
             className="hidden rounded-md border border-cream px-4 py-2 text-sm font-semibold text-cream hover:bg-cream hover:text-jet md:inline-block"
